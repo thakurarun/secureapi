@@ -1,7 +1,5 @@
 ﻿var express = require('express');
 var mongoose = require('mongoose');
-var Promise = require('promise');
-
 var userModel = mongoose.model('User');
 var roleModel = mongoose.model('Role');
 var userInRoleModel = mongoose.model('UserInRole');

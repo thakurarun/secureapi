@@ -15,17 +15,26 @@
     <EnableTypeScript>true</EnableTypeScript>
     <TypeScriptSourceMap>true</TypeScriptSourceMap>
     <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <NodejsPort>8080</NodejsPort>
+    <StartWebBrowser>True</StartWebBrowser>
+    <NodeExePath>
+    </NodeExePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
     <Compile Include="AppCode\LoadModels.js" />
+    <Compile Include="AppCode\LoadRouter.js" />
     <Compile Include="AppCode\RunOnce.js" />
     <Compile Include="config\AppConfig.js" />
     <Compile Include="config\DbConfig.js" />
-    <Compile Include="Entities\Roles\Model\Role.js" />
-    <Compile Include="Entities\Roles\Model\UserInRole.js" />
+    <Compile Include="Entities\Membership\Model\Role.js" />
+    <Compile Include="Entities\Membership\Model\UserInRole.js" />
+    <Compile Include="Entities\Membership\Repositories.js" />
+    <Compile Include="Entities\Membership\Routers\AuthenticateRouter.js" />
+    <Compile Include="Entities\Membership\Services\AuthenticateService.js" />
     <Compile Include="Entities\Users\Model\User.js" />
+    <Compile Include="Entities\Users\Routers\UserRouter.js" />
     <Content Include="package.json" />
     <Compile Include="app.js" />
   </ItemGroup>
@@ -33,12 +42,14 @@
     <Folder Include="config\" />
     <Folder Include="AppCode\" />
     <Folder Include="Entities\" />
-    <Folder Include="Entities\Roles\" />
-    <Folder Include="Entities\Roles\Model\" />
-    <Folder Include="Entities\Roles\Controller\" />
-    <Folder Include="Entities\Roles\Services\" />
+    <Folder Include="Entities\Membership\" />
+    <Folder Include="Entities\Membership\Model\" />
+    <Folder Include="Entities\Membership\Routers\" />
+    <Folder Include="Entities\Membership\Services\" />
     <Folder Include="Entities\Users\" />
     <Folder Include="Entities\Users\Model\" />
+    <Folder Include="Entities\Users\Routers\" />
+    <Folder Include="Entities\Users\Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
