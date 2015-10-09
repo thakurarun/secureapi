@@ -4,8 +4,8 @@ var Schema = mongoose.Schema;
 
 // set up a mongoose model and pass it using module.exports
 module.exports = mongoose.model('UserInRole', new Schema({
-    userId: Schema.Types.ObjectId,
-    roleId: Schema.Types.ObjectId,
+    user: { type: Schema.Types.ObjectId, ref:'User' },
+    role: { type: Schema.Types.ObjectId, ref:'Role' },
     createdDate: { type: Date, default: Date.now },
     isActive : { type: Boolean, default: true }
 }));

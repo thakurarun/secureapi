@@ -28,9 +28,10 @@
     <Compile Include="AppCode\RunOnce.js" />
     <Compile Include="config\AppConfig.js" />
     <Compile Include="config\DbConfig.js" />
+    <Compile Include="Entities\Membership\Model\LoginStatus.js" />
     <Compile Include="Entities\Membership\Model\Role.js" />
     <Compile Include="Entities\Membership\Model\UserInRole.js" />
-    <Compile Include="Entities\Membership\Repositories.js" />
+    <Compile Include="Entities\Membership\Repositories\AuthenticationRepository.js" />
     <Compile Include="Entities\Membership\Routers\AuthenticateRouter.js" />
     <Compile Include="Entities\Membership\Services\AuthenticateService.js" />
     <Compile Include="Entities\Users\Model\User.js" />
@@ -44,6 +45,7 @@
     <Folder Include="Entities\" />
     <Folder Include="Entities\Membership\" />
     <Folder Include="Entities\Membership\Model\" />
+    <Folder Include="Entities\Membership\Repositories\" />
     <Folder Include="Entities\Membership\Routers\" />
     <Folder Include="Entities\Membership\Services\" />
     <Folder Include="Entities\Users\" />

@@ -30,8 +30,8 @@ var CreateAdmin = function (AdminRoleId) {
             console.log(err);
         } else {
             new userInRoleModel({
-                userId: newAdmin._id,
-                roleId: AdminRoleId,
+                user: newAdmin._id,
+                role: AdminRoleId,
                 isActive : true
             }).save(function (err) {
                 if (err)

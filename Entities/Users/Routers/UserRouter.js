@@ -5,7 +5,7 @@
     });
     
     // route to return all users (GET http://localhost:8080/api/users)
-    apiRoutes.get('/users', function (req, res) {
+    apiRoutes.post('/secure/users', function (req, res) {
         res.json({ message: 'This should be secure!' });
     });
     return apiRoutes;
