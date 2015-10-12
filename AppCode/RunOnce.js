@@ -5,7 +5,7 @@ var roleModel = mongoose.model('Role');
 var userInRoleModel = mongoose.model('UserInRole');
 
 var CreateRoles = function (callback) {
-    var roles = ["admin", "typeA", "typeB", "typeC"];
+    var roles = ["admin", "member", "typeB", "typeC"];
     Array.prototype.forEach.call(roles, function (role, index) {
         new roleModel({
             name: role, 

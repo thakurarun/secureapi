@@ -35,7 +35,9 @@
     <Compile Include="Entities\Membership\Routers\AuthenticateRouter.js" />
     <Compile Include="Entities\Membership\Services\AuthenticateService.js" />
     <Compile Include="Entities\Users\Model\User.js" />
+    <Compile Include="Entities\Users\Repositories\UserRepository.js" />
     <Compile Include="Entities\Users\Routers\UserRouter.js" />
+    <Compile Include="Entities\Users\Services\UserService.js" />
     <Content Include="package.json" />
     <Compile Include="app.js" />
   </ItemGroup>
@@ -50,6 +52,7 @@
     <Folder Include="Entities\Membership\Services\" />
     <Folder Include="Entities\Users\" />
     <Folder Include="Entities\Users\Model\" />
+    <Folder Include="Entities\Users\Repositories\" />
     <Folder Include="Entities\Users\Routers\" />
     <Folder Include="Entities\Users\Services\" />
   </ItemGroup>

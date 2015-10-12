@@ -4,8 +4,12 @@ var Schema = mongoose.Schema;
 
 // set up a mongoose model and pass it using module.exports
 module.exports = mongoose.model('User', new Schema({
-    name: String,
     username: String, 
     password: String, 
-    isActive: Boolean
+    name: String,
+    number: Schema.Types.Number,
+    countryCode: Schema.Types.String,
+    face: Schema.Types.String,
+    isActive: { type : Schema.Types.Boolean, default: true },
+    createdDate: { type : Schema.Types.Date, default: Date.now }
 }));
