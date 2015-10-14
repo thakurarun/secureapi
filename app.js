@@ -47,7 +47,7 @@ apiRoutes.use('/secure',function (req, res, next) {
 });
 apiRoutes.use(function (err, req, res, next) {
     res.status(500).send(err.message);
-    next();
+   // next();
 });
 //Loading routes
 require('./AppCode/LoadRouter.js')(apiRoutes);

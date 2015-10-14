@@ -9,13 +9,19 @@ module.exports = function (apiRoutes) {
     apiRoutes.post('/secure/users', function (req, res) {
         res.json({ message: 'This should be secure!' });
     });
+    apiRoutes.post('/secure/synccontacts', function (req, res) {
+        userService.syncContacts(req.body).then(function (data) {
+            res.json(data);
+        }, function (err) {
+            res.json(err);
+        });
+    });
     apiRoutes.post('/public/adduser', function (req, res) {
-        userService.addUser(req.body).then(function (result) { 
+        userService.addUser(req.body).then(function (result) {
             res.json(result);
         }, function (failed) {
             res.json(failed);
         });
-        
     });
     return apiRoutes;
 }

@@ -34,7 +34,9 @@
     <Compile Include="Entities\Membership\Repositories\AuthenticationRepository.js" />
     <Compile Include="Entities\Membership\Routers\AuthenticateRouter.js" />
     <Compile Include="Entities\Membership\Services\AuthenticateService.js" />
+    <Compile Include="Entities\Users\Model\MemberRelations.js" />
     <Compile Include="Entities\Users\Model\User.js" />
+    <Compile Include="Entities\Users\Repositories\ContactSyncRepository.js" />
     <Compile Include="Entities\Users\Repositories\UserRepository.js" />
     <Compile Include="Entities\Users\Routers\UserRouter.js" />
     <Compile Include="Entities\Users\Services\UserService.js" />
